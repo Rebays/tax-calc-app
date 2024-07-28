@@ -23,7 +23,7 @@ const config: Config = {
         'purple-500':'#5B00B7',
         'purple-800':'#37006E',
         'white':'#fff',
-        'green-100':'#00C2A8',
+        'green-100':'#D9F6F2',
         'green-500':'#00C2A8',
         'neutral-100':'#F6F6F6',
         'gray-100':'#6B758E',
