@@ -4,15 +4,15 @@ import CalculatorSummary from "./CalculatorSummary";
 
 function Calculator() {
     return ( 
-        <>
+        <div className="bg-green-100 py-14">
         <CalculatorInput/>
-        <div id="calculator-result-box">
+        <div className="px-4" id="calculator-result-box">
             <CalculatorResult/>
             <CalculatorSummary/>
         
        </div>
 
-        </>
+        </div>
      );
 }
 
