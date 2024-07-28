@@ -27,7 +27,7 @@ const config: Config = {
         'green-500':'#00C2A8',
         'neutral-100':'#F6F6F6',
         'gray-100':'#6B758E',
-        'gray-700':'#30303',
+        'gray-700':'#303030',
 
       },
     },
