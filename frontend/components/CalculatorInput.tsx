@@ -2,7 +2,7 @@ function CalculatorInput() {
     return (
         <div className="space-y-12">
             <div className="flex items-center w-full">
-                <div className="flex w-full border border-neutral-100 rounded-3xl overflow-hidden p-0.5">
+                <div className="flex w-full border bg-white border-neutral-100 rounded-3xl overflow-hidden p-0.5">
                     <div className="flex-1 text-center">
                         <input type="radio" id="monthly" name="period" hidden/>
                         <label htmlFor="monthly" className="block w-full px-6 py-3 bg-white text-purple-500 text-text-normal font-bold cursor-pointer rounded-3xl">monthly</label>
