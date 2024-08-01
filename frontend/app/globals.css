@@ -23,3 +23,8 @@
     text-wrap: balance;
   }
 }
+
+input[type="radio"]:checked+label {
+  background-color: #5B00B7;
+  color: #fff;
+}
