@@ -7,7 +7,7 @@ function Extras() {
         <div id="extras-accordion-item-1" className="relative mb-3">
           <h6 className="mb-0">
             <button
-              className="relative flex items-center rounded-2xl  w-full p-6 font-semibold text-left transition-all ease-in border-b  cursor-pointer text-white bg-purple-200"
+              className="relative flex items-center rounded-2xl  w-full p-6 font-semibold text-left transition-all ease-in border-b  cursor-pointer text-white bg-purple-500"
               data-collapse-target="collapse-1"
             >
               <span>Disclaimer & Assumptions</span>
@@ -27,7 +27,7 @@ function Extras() {
         <div id="extras-accordion-item-2" className="relative mb-3">
           <h6 className="mb-0">
             <button
-              className="relative flex items-center rounded-2xl  w-full p-6 font-semibold text-left transition-all ease-in border-b  cursor-pointer text-white bg-purple-200"
+              className="relative flex items-center rounded-2xl  w-full p-6 font-semibold text-left transition-all ease-in border-b  cursor-pointer text-white bg-purple-500"
               data-collapse-target="collapse-2"
             >
               <span>More Information</span>
