@@ -9,13 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-       'hero-gradient': 'linear-gradient(to bottom, #6E08D4, #9237ED, #6E28B4)',
+       'hero-gradient': 'linear-gradient(to bottom, #6E08D4, #6F00DE, #6E28B4)',
       },
       fontSize:{
         'text-heading': '40px',
         'text-title': '28px',
         'text-sub-title': '23px',
-        'text-normal': '16px'
+        'text-normal': '16px',
+        'sm': '13px',
       },
       colors: {
         'purple-50': '#f1e6fc',
