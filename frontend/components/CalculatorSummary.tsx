@@ -32,7 +32,7 @@ function CalculatorSummary(props: any) {
 
     return (  
         result && (
-            <div className="pt-4 pb-4 flex flex-col gap-4 ">
+            <div className="pt-4 pb-4 flex flex-col gap-4 animate__animated animate__fadeIn">
             
             <div className=" flex flex-col gap-2 px-4">
                 <h6 className="text-neutral-800 font-bold">Summary</h6>

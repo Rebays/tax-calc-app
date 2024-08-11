@@ -8,6 +8,7 @@ function Header() {
             <Container>
                 <div className="ps-8 pt-6 pb-6">
                     <Image
+                        className="animate__animated  animate__fadeIn"
                         src={logo} 
                         alt="logo" 
                     /> 
