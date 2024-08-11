@@ -1,7 +1,10 @@
 import { QuestionMarkCircleIcon } from "@heroicons/react/16/solid";
+import CountUp from "react-countup";
+
 
 function CalculatorResult(props:any) {
     console.log(props.input);
+  
     return (
 
         <>
@@ -11,7 +14,8 @@ function CalculatorResult(props:any) {
                     <p className="text-text-normal">Your estimated annual tax</p>
 
                     <h3 className="text-text-heading py-6 text-wrap">
-                        ${props.input.taxPayable}
+                        $<CountUp end={props.input.taxPayable} decimals={2} />
+                       
                     </h3>
 
                 </div>
@@ -24,7 +28,7 @@ function CalculatorResult(props:any) {
                             <span className="w-6 absolute pl-2 pt-1 text-text-normal roup-open:opacity-100 text-green-600"><QuestionMarkCircleIcon/></span>
                         </div>
                         <div className="flex-none w-10">
-                            ${props.input.taxPayable}
+                            $<CountUp end={props.input.taxPayable} decimals={2}/>
                         </div>
 
                     </div>
@@ -36,7 +40,7 @@ function CalculatorResult(props:any) {
                             <span className="w-6 absolute pl-2 pt-1 text-text-normal roup-open:opacity-100 text-green-600"><QuestionMarkCircleIcon/></span>
                         </div>
                         <div className="flex-none w-10">
-                            ${props.input.netIncome}
+                            $<CountUp end={props.input.netIncome} decimals={2}/>
                         </div>
 
                     </div>
@@ -48,7 +52,7 @@ function CalculatorResult(props:any) {
                             <span className="w-6 absolute pl-2 pt-1 text-text-normal roup-open:opacity-100 text-green-600"><QuestionMarkCircleIcon/></span>
                         </div>
                         <div className="flex-none w-10">
-                            {props.input.marginalTaxRate * 100}%
+                        <CountUp end={props.input.marginalTaxRate * 100} decimals={2}/>%
                         </div>
 
                     </div>
