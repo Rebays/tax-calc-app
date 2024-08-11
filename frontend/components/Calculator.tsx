@@ -39,8 +39,10 @@ function Calculator() {
                         className="lg:col-span-4"
                         id="calculator-result-box"
                     >
+
                         <CalculatorResult input={result} />
-                        <CalculatorSummary/>
+                        <CalculatorSummary result={result}/>
+
                     </div>
 
                 </div>
