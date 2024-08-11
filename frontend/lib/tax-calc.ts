@@ -186,5 +186,5 @@ function calculatePayeTax(
 
 
 export default calculatePayeTax;
-export type { Bracket, PayeTaxInfo, Period };
-export { brackets, THRESHOLD };
+export type { Bracket, PayeTaxInfo };
+export {Period, brackets, THRESHOLD };
