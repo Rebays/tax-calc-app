@@ -1,5 +1,7 @@
 "use client"
 import Accordion from "@/ui/Accordion";
+import Container from "@/ui/Container";
+
 
 const data = [
   {
@@ -16,13 +18,18 @@ const data = [
 function Extras() {
   return (
     <>
-      <div id="extras-wrapper" className="px-8 py-14" data-accordion="collapse">
+    <Container>
+
+      <div id="extras-wrapper" className="px-8 py-14 lg:px-0" data-accordion="collapse">
           {
             data.map((item)=>(
               <Accordion title={item.title} content={item.content}/>
             ))
           } 
       </div>
+
+    </Container>
+      
     </>
   );
 }
