@@ -12,7 +12,7 @@ function CalculatorInput(props:any) {
     }
     
     return (
-        <div className="space-y-12">
+        <div className="space-y-12 animate__animated  animate__fadeIn">
             <div className="flex items-center w-full">
                 <div className="flex w-full border bg-white border-neutral-50 rounded-3xl overflow-hidden p-0.5">
                     <div className="flex-1 text-center">

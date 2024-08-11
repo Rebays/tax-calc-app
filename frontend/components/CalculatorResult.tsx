@@ -8,7 +8,7 @@ function CalculatorResult(props:any) {
     return (
 
         <>
-            <div id="calculator-result-wrapper" className="shadow-md rounded-2xl mb-12">
+            <div id="calculator-result-wrapper" className="shadow-md rounded-2xl mb-12 animate__animated animate__fadeIn ">
                 <div id="main-result" className="bg-purple-500 text-white rounded-t-2xl px-8 pt-6">
 
                     <p className="text-text-normal">Your estimated annual tax</p>

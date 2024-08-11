@@ -3,6 +3,7 @@ import Extras from "@/components/Extras";
 import Hero from "@/components/Hero";
 import Information from "@/components/Information";
 import Image from "next/image";
+import 'animate.css';
 
 export default function Home() {
   return (
