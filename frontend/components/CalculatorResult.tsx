@@ -1,6 +1,7 @@
 import { QuestionMarkCircleIcon } from "@heroicons/react/16/solid";
 
-function CalculatorResult() {
+function CalculatorResult(props:any) {
+    console.log(props.input);
     return (
 
         <>
@@ -10,7 +11,7 @@ function CalculatorResult() {
                     <p className="text-text-normal">Your estimated annual tax</p>
 
                     <h3 className="text-text-heading py-6 text-wrap">
-                        $6000.00
+                        ${props.input.taxPayable}
                     </h3>
 
                 </div>
@@ -23,7 +24,7 @@ function CalculatorResult() {
                             <span className="w-6 absolute pl-2 pt-1 text-text-normal roup-open:opacity-100 text-green-600"><QuestionMarkCircleIcon/></span>
                         </div>
                         <div className="flex-none w-10">
-                            $0
+                            ${props.input.taxPayable}
                         </div>
 
                     </div>
@@ -35,7 +36,7 @@ function CalculatorResult() {
                             <span className="w-6 absolute pl-2 pt-1 text-text-normal roup-open:opacity-100 text-green-600"><QuestionMarkCircleIcon/></span>
                         </div>
                         <div className="flex-none w-10">
-                            $0
+                            ${props.input.netIncome}
                         </div>
 
                     </div>
@@ -47,7 +48,7 @@ function CalculatorResult() {
                             <span className="w-6 absolute pl-2 pt-1 text-text-normal roup-open:opacity-100 text-green-600"><QuestionMarkCircleIcon/></span>
                         </div>
                         <div className="flex-none w-10">
-                            0%
+                            {props.input.marginalTaxRate * 100}%
                         </div>
 
                     </div>
