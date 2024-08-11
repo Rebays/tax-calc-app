@@ -1,10 +1,25 @@
+"use client"
+import calculatePayeTax, { brackets, Period, THRESHOLD } from "@/lib/tax-calc";
 import CalculatorInput from "./CalculatorInput";
 import CalculatorResult from "./CalculatorResult";
 import CalculatorSummary from "./CalculatorSummary";
 import Container from "@/ui/Container";
+import { useCallback, useState } from "react";
 
 
 function Calculator() {
+   
+    const [result, setResult] = useState({});
+
+    function calculate(gross: any){
+        
+        let res = calculatePayeTax(gross,Period.Annually,THRESHOLD,brackets);
+        setResult(res);
+
+        console.log(res);
+    }
+    
+
     return ( 
         <section> 
             <Container>
@@ -17,7 +32,7 @@ function Calculator() {
                     <div 
                         className="lg:col-span-3"
                     >
-                        <CalculatorInput/>
+                        <CalculatorInput onChange={calculate}/>
                     </div>
                     
                     <div 

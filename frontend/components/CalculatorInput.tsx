@@ -3,11 +3,14 @@ import calculatePayeTax, { brackets, Period, THRESHOLD } from "@/lib/tax-calc";
 import { useState } from "react";
 
 
-function CalculatorInput() {
+function CalculatorInput(props:any) {
  
     const [Period, setPeriod] = useState('annually');
 
-
+    function onChange(e: any){
+        props.onChange(e.target.value) 
+    }
+    
     return (
         <div className="space-y-12">
             <div className="flex items-center w-full">
@@ -33,15 +36,10 @@ function CalculatorInput() {
                 </div>
                 <div className="relative">
                     <span className="absolute left-4 top-1/2 transform -translate-y-1/2 font-bold text-neutral-900">$</span>
-                    <input type="number" className="w-full py-6 pl-12 pr-8 rounded-2xl shadow-lg text-text-normal" onChange={e=>Calculate(e.target.value)}/>
+                    <input type="number" className="w-full py-6 pl-12 pr-8 rounded-2xl shadow-lg text-text-normal" onChange={onChange}/>
                 </div>
             </div>
         </div>
     );
 }
-function Calculate(gross:any){
-    
-    console.log(calculatePayeTax(gross,Period.Annually,THRESHOLD,brackets));
-}
-
 export default CalculatorInput;
