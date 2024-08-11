@@ -40,7 +40,7 @@ function Calculator() {
                         id="calculator-result-box"
                     >
                         <CalculatorResult/>
-                        <CalculatorSummary/>
+                        <CalculatorSummary result={result}/>
                     </div>
 
                 </div>
