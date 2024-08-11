@@ -1,3 +1,5 @@
+import CountUp from "react-countup";
+
 function CalculatorSummary(props: any) {
     const { result } = props;
     
@@ -16,8 +18,12 @@ function CalculatorSummary(props: any) {
             key++;
             return (
                 <li key={key} className="bg-white flex justify-between p-4">
+                    
                     <span className="text-neutral-900">{summaryItem.description}</span>
-                    <span className="font-bold text-neutral-900" >${summaryItem.taxInBracket | 0}</span>
+                    
+                    <span className="font-bold text-neutral-900" >$
+                        <CountUp end={summaryItem.taxInBracket | 0} decimals={2}/>
+                    </span>
                 </li>
             )
         });
@@ -35,6 +41,7 @@ function CalculatorSummary(props: any) {
             
             <ul className="rounded-2xl flex flex-col overflow-hidden gap-[1px] shadow-md">
                 {summaries}
+                
             </ul>
 
         </div>)
