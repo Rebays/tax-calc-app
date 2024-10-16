@@ -1,3 +1,5 @@
 export default {
-    output: 'export',  // Generates static files
-};
+    output: 'export',
+    assetPrefix: './',
+    basePath: '/tax-calc-app',  // Use your actual repository name here
+  };
