@@ -85,12 +85,13 @@ jobs:
         env:
           GITHUB_PAGES: true
       - name: Check output directory
-        run: ls -la ./out
+        run: ls -la ./frontend/out
         continue-on-error: true
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./frontend/out  # Adjust path if needed
+
 
   # Deployment job
   deploy:
