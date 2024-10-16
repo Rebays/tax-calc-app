@@ -67,7 +67,7 @@ jobs:
       - name: Restore cache
         uses: actions/cache@v4
         with:
-          cache-dependency-path: frontend/package-lock.json
+          cache-dependency-path: ./frontend
           node-version: 20
           cache: 'npm'
           # Generate a new cache whenever packages or source files change.
