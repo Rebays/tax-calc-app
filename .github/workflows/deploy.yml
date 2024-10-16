@@ -74,8 +74,11 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('tax-calc-app/frontend/package-lock.json', 'tax-calc-app/frontend/yarn.lock') }}-
           path: |
             tax-calc-app/frontend/node_modules  # Path to the directory you want to cache
+      
       - name: Install dependencies
-        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+        run: npm ci
+        working-directory: ./tax-calc-app/frontend
+        
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
