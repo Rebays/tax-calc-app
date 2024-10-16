@@ -2,7 +2,7 @@
 #
 # To get started with Next.js see: https://nextjs.org/docs/getting-started
 #
-name: Deploy tax-calc-app  to github Pages
+name: Deploy Next.js site to Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -27,11 +27,7 @@ concurrency:
 jobs:
   # Build job
   build:
-    defaults:
-      run:
-        working-directory: ./frontend
     runs-on: ubuntu-latest
-    environment: gh-pages
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -56,7 +52,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: npm
+          cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
@@ -78,11 +74,11 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build && touch ${{ github.workspace }}/frontend/out/.nojekyll
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ${{ github.workspace }}/frontend/out
+          path: ./out
 
   # Deployment job
   deploy:
