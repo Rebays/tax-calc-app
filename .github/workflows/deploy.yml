@@ -80,10 +80,13 @@ jobs:
         working-directory: ./frontend
         
       - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        run: npm run build && npm run export
         working-directory: ./frontend  # Ensure this is set to where your Next.js project lives
         env:
           GITHUB_PAGES: true
+      - name: Check output directory
+        run: ls -la ./out
+        continue-on-error: true
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
